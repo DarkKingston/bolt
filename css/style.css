@@ -1,0 +1,6 @@
+/* reset styles */
+@import '/css/reset.css';
+
+/* header & footer */
+@import '/css/footer.css';
+@import '/css/header.css';

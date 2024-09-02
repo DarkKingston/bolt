@@ -1,0 +1,22 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} \.(css|jpg|gif|png|zip|rar|doc|xls|js|tif|jpeg|tiff|docx|xlsx|ico|ttf|svg|woff)$|test\.php$
+RewriteRule ^(.*)$ $1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .*? index.php
+
+
+
+
+# error reporting
+#php_flag  log_errors on
+
+# general directive for setting php error level  
+# 8191 - Complete error reporting / 128 - Zend error reporting / 8 - Basic error reporting / 1 - Minimal error reporting
+#php_value error_reporting 1
+
+# disable repeated error logging
+#php_flag ignore_repeated_errors on
+#php_flag ignore_repeated_source on
+
+#php_value error_log  /home/***/public_html/PHP_errors.log
